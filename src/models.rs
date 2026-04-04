@@ -22,6 +22,7 @@ pub struct DbSecret {
     pub username: String,
     pub password: String,
     pub host: String,
-    pub port: Option<u16>,
+    pub port: u16,
+    #[serde(alias = "database", alias = "db_name", alias = "dbInstanceIdentifier")]
     pub dbname: String,
 }
